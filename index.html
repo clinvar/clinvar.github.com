@@ -1,0 +1,134 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>demo</title>
+<meta charset="UTF-8">
+<script type="text/javascript" src="js/d3.js"></script>
+<script type="text/javascript" src="js/colorbrewer.js"></script>
+<script type="text/javascript" src="js/crossfilter.js"></script>
+<script type="text/javascript" src="js/dc.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/dc.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-35324801-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+ var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+ })();
+
+</script>
+
+
+</head>
+<body>
+
+<div class="container">
+<div class="row">
+<div id="cnt-score">
+<strong>Total Variant Count</strong>
+<span class="reset" style="display: none;">range: <span class="filter"></span></span>
+<a class="reset" href="javascript:cntScoreBar.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+<div class="clearfix"></div>
+</div>
+
+<div id="pp2-score">
+<strong>PP2</strong>
+<span class="reset" style="display: none;">range: <span class="filter"></span></span>
+<a class="reset" href="javascript:pp2ScoreBar.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+<div class="clearfix"></div>
+</div>
+
+<div id="sift-score">
+<strong>SIFT</strong>
+<span class="reset" style="display: none;">range: <span class="filter"></span></span>
+<a class="reset" href="javascript:siftScoreBar.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+<div class="clearfix"></div>
+</div>
+
+
+<div id="esp-score">
+<strong>NHLBI ESP6500</strong>
+<span class="reset" style="display: none;">range: <span class="filter"></span></span>
+<a class="reset" href="javascript:espScoreBar.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+<div class="clearfix"></div>
+</div>
+
+<div id="snp137-score">
+<strong>dbSNP</strong>
+<span class="reset" style="display: none;">range: <span class="filter"></span></span>
+<a class="reset" href="javascript:snp137ScoreBar.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+<div class="clearfix"></div>
+</div>
+
+<div id="nci60-score">
+<strong>NCI60</strong>
+<span class="reset" style="display: none;">range: <span class="filter"></span></span>
+<a class="reset" href="javascript:nci60ScoreBar.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+<div class="clearfix"></div>
+</div>
+
+<div id="cosmic-score">
+<strong>COSMIC</strong>
+<span class="reset" style="display: none;">range: <span class="filter"></span></span>
+<a class="reset" href="javascript:cosmicScoreBar.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+<div class="clearfix"></div>
+</div>
+
+<div id="pcgp-score">
+<strong>Pediatric Cancer Genome</strong>
+<span class="reset" style="display: none;">range: <span class="filter"></span></span>
+<a class="reset" href="javascript:pcgpScoreBar.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+<div class="clearfix"></div>
+</div>
+
+<div id="g1000-score">
+<strong>1000 Genome</strong>
+<span class="reset" style="display: none;">range: <span class="filter"></span></span>
+<a class="reset" href="javascript:g1000ScoreBar.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+<div class="clearfix"></div>
+</div>
+
+<div id="cg69-score">
+<strong> CompleteGenomics 69</strong>
+<span class="reset" style="display: none;">range: <span class="filter"></span></span>
+<a class="reset" href="javascript:cg69ScoreBar.filterAll();dc.redrawAll();" style="display: none;">reset</a>
+<div class="clearfix"></div>
+</div>
+
+
+<div class="dc-data-count">
+<span class="filter-count"></span> selected out of <span class="total-count"></span> records | <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
+</div>
+
+<div class="clear"></div>
+<p></p>
+<p></p>
+
+</div> 
+<div class="row" >
+ <table class="table table-hover dc-data-table">
+<thead>
+<tr class="header">
+<td>Gene</td>
+<td>TotalVariant</td>
+<td>ESP6500</td>
+<td>PP2</td>
+<td>1000G</td>
+<td>PediatricCancer</td>
+<td>SIFT</td>
+<td>NCI60</td>
+<td>COSMIC</td>
+<td>CG 69</td>
+<td>dbSNPID</td>
+</tr>
+</thead>
+</table>
+<script type="text/javascript" src="js/snps.js"></script>
+</body>
+
+</html>
